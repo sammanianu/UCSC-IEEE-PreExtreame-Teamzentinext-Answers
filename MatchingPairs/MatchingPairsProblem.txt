@@ -1,0 +1,33 @@
+Two words are matching, if the letters in one word can be remapped to get the second word. That is replacing all occurrences of a letter by another letter. The order of the letters should not change. Each letter should be mapped to a letter. A letter can map to itself, but two letters cannot map to the same letter. and deferent letters can be mapped to different letters.
+
+For example, the words "abca" and "zbxz" are matching because we can map 'a' to 'z', 'b' to 'b' and 'c' to 'x'.
+
+Given a list of words, return how many unordered pairs of words are matching.
+
+Input Format
+
+First line contains an integer giving the number of words. Each of the following lines contains the words.
+
+Output Format
+
+A single integer giving the number of matching word pairs
+
+Sample Input
+
+5
+aa
+ab
+bb
+cc
+cd
+Sample Output
+
+4
+Explanation
+
+Mathcing pairs
+
+aa, bb
+aa, cc
+bb, cc
+ab, cd

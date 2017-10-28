@@ -1,0 +1,27 @@
+t=int(raw_input())
+words=[]
+count=0
+
+def isIsomorphic(s, t):
+    s_dict = {}
+    t_dict = {}
+    for i in range(len(s)):
+        if s[i] in s_dict.keys() and s_dict[s[i]] != t[i]:
+            return False
+        if t[i] in t_dict.keys() and t_dict[t[i]] != s[i]:
+            return False
+        s_dict[s[i]] = t[i]
+        t_dict[t[i]] = s[i]
+    return True
+
+for i in range(0,t):
+    words.append(raw_input().strip())
+for k in words:
+    for l in words:
+        if(k==l):
+            pass
+        else:
+            boo = isIsomorphic(k,l)
+            if(boo):
+                count+=1
+print count/2
