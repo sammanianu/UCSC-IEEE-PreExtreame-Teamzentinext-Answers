@@ -1,0 +1,75 @@
+#include <iostream>
+
+using namespace std;
+
+string getTimeFormatted(int h, int m);
+string numToWord(int num);
+
+int main()
+{
+    int H, M;
+    cin >> H;
+    cin >> M;
+    cout << getTimeFormatted(H, M);
+}
+
+string getTimeFormatted(int h, int m){
+
+    string time;
+    if(m == 0){
+        time = numToWord(h)+" o' clock";
+    }
+    else if(m == 1){
+        time = numToWord(m) + " minute past " + numToWord(h);
+    }
+    else if(m == 15){
+        time = "quarter past "+numToWord(h);
+    }
+    else if(m == 30){
+        time = "half past "+numToWord(h);
+    }
+    else if(m == 45){
+        time = "quarter to "+numToWord(h+1);
+    }
+    else if(m < 30){
+        time = numToWord(m) + " minutes past " + numToWord(h);
+    }
+    else{
+        if(60 - m == 1){
+            time = numToWord(60 - m) + " minute to " + numToWord(h + 1);
+        }
+        else{
+            time = numToWord(60 - m) + " minutes to " + numToWord(h + 1);
+        }
+    }
+
+    return time;
+}
+
+string numToWord(int num){
+
+    string ones[20] = {"zero", "one", "two", "three","four","five","six","seven",
+    "eight","nine","ten","eleven","twelve","thirteen","fourteen","fifteen","sixteen","seventeen",
+    "eighteen","nineteen"};
+
+    string tens[10] = {"", "ten", "twenty", "thirty","forty","fifty","sixty","seventy",
+    "eighty","ninety"};
+
+    string word;
+
+    if(num >= 20)
+    {
+        word = tens[num / 10];
+        if(num % 10)
+        {
+            word += " ";
+            word += numToWord(num % 10);
+        }
+    }
+    else
+    {
+        word = ones[num];
+    }
+
+    return word;
+}

@@ -1,0 +1,34 @@
+Ashan got a new wrist watch as a gift from Pasan that display the time in words.
+
+textwatch.jpg
+Ashan is a curious person so he wanted to try this by himself using his programing skills.
+
+your task is to help him to writte a programe which prints the time in words as the format mentioned above. 
+
+
+Constraints
+1≤H≤12
+0≤M<60
+
+Input Format
+
+There will be two lines of input:
+H, representing the hours
+M, representing the minutes
+
+Output Format
+
+Display the time in words.
+
+Sample Input
+
+5 
+47
+
+Sample Output
+
+thirteen minutes to six
+
+Explanation
+
+No Explanation
