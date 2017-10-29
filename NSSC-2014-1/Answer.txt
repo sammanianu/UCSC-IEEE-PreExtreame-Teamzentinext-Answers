@@ -1,0 +1,32 @@
+from collections import OrderedDict
+
+
+def con_roman(num):
+
+    roman = OrderedDict()
+    roman[1000] = "Z"
+    roman[100] = "Y"
+    roman[10] = "X"
+    roman[5] = "V"
+    roman[1] = "I"
+
+    def roman_num(num):
+        for r in roman.keys():
+            x, y = divmod(num, r)
+            yield roman[r] * x
+            num -= (r * x)
+            if num > 0:
+                roman_num(num)
+            else:
+                break
+
+    return "".join([a for a in roman_num(num)])
+
+
+
+inp = raw_input().split(' ')
+for i in inp:
+    dig = int(i)
+    print str(dig)+":",con_roman(dig)
+
+

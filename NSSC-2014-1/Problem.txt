@@ -1,0 +1,28 @@
+Write a program to display tally characters ( 'I', 'V', 'X', 'Y' and 'Z') for a series of number marks given as input. You have to help by writing the code that would do that as follows:
+
+• To represent number 1 it is okay to use the 'I' character.
+
+• To represent number 5 it is okay to use the 'V' character.
+
+• To represent number 10 it is okay to use the 'X' character.
+
+• To represent number 100 it is okay to use the 'Y' character.
+
+• To represent number 1000 it is okay to use the 'Z' character.
+
+You have to print the number before you display the tally character marks and the input numbers will be integers of a range from 1 to 9999.
+
+Sample Input
+
+8 19 30 77 100 205 1200 1005 1111 
+Sample Output
+
+8: VIII
+19: XVIIII
+30: XXX
+77: XXXXXXXVII
+100: Y
+205: YYV
+1200: ZYY
+1005: ZV
+1111: ZYXI
