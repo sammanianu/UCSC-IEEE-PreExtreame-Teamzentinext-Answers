@@ -1,0 +1,21 @@
+test = int(input().strip())
+for i in range(test):
+    ans1 = int(input().strip())
+    row = []
+    for j in range(0, 4):
+        row.append(input().strip().split())
+    ans2 = int(input().strip())
+    col = []
+    for j in range(0, 4):
+        col.append(input().strip().split())
+        
+    num = [n for n in row[ans1-1] if n in col[ans2-1]]
+     
+    if len(num) < 1:
+        print("Volunteer cheated!")
+    elif len(num) == 1:
+        print(num[0])
+    elif len(num) > 1:
+        print("Bad magician!")
+        
+     

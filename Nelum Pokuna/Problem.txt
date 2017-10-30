@@ -1,0 +1,69 @@
+hich card the girl chose. Amazing, right?
+
+You decide to write a program to help you understand the Burt's technique. The program will be given the two arrangements of the cards, and the volunteer's answers to the two questions: the row number of the selected card in the first arrangement, and the row number of the selected card in the second arrangement. The rows are numbered 1 to 4 from top to bottom. 
+
+Your program should determine which card the volunteer chose; or if there is more than one card the volunteer might have chosen (Burt did a bad job); or if there's no card consistent with the volunteer's answers (the volunteer cheated).
+
+Input Format
+
+First line will contain a number T.(No of test cases).
+
+Each test case starts with a line containing an integer: the answer to the first question.
+The next 4 lines represent the first arrangement of the cards: each contains 4 integers, separated by a single space. 
+The next line contains the answer to the second question, and the following four lines contain the second arrangement in the same format.
+
+Output Format
+
+For each test case, Print one line.
+
+If there is a single card the volunteer could have chosen,Print the number on the card.
+
+If there are multiple cards the volunteer could have chosen, Print "Bad magician!", without the quotes. 
+
+If there are no cards consistent with the volunteer's answers, Print "Volunteer cheated!", without the quotes.
+
+The text needs to be exactly right, so consider copying/pasting it from here.
+
+Sample Input
+
+3
+2
+1 2 3 4
+5 6 7 8
+9 10 11 12
+13 14 15 16
+3
+1 2 5 4
+3 11 6 15
+9 10 7 12
+13 14 8 16
+2
+1 2 3 4
+5 6 7 8
+9 10 11 12
+13 14 15 16
+2
+1 2 3 4
+5 6 7 8
+9 10 11 12
+13 14 15 16
+2
+1 2 3 4
+5 6 7 8
+9 10 11 12
+13 14 15 16
+3
+1 2 3 4
+5 6 7 8
+9 10 11 12
+13 14 15 16
+
+Sample Output
+
+7
+Bad magician!
+Volunteer cheated!
+
+Explanation
+
+No Explanation.Read the Problem agian.
