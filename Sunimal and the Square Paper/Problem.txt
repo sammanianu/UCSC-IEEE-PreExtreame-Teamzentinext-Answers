@@ -1,0 +1,35 @@
+Sunimal is folding a square piece of paper of side length 1 such that if there is a square of side length L, he will fold it into 4 squares each of side L/2 every second. Chamath, for some reason, stops Sunimal from folding the paper after T seconds, and decides to find the length of all solid lines formed in the forming of each square and the perimeter of the base paper. You have to find this length after a time T.
+
+Screen Shot 2015-05-30 at 2.46.07 PM.png
+
+Limits
+1 = T = 105 
+0 = N = 109
+
+Input Format
+
+First line contains number of test cases N.
+Each test case contains the time T in one line.
+
+Output Format
+
+For each test case, print the required answer in a new line.
+As the number can be large print result mod (109 +7 )
+
+Sample Input
+
+3
+0
+1
+2
+
+Sample Output
+
+4
+6
+10
+
+Explanation
+
+After 0 seconds, 1 * 4 = 4 , the length is 4 . 
+After 1 second, 1/2 * 12 = 6 ,the length is 6 

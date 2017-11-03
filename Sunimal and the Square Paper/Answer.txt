@@ -1,0 +1,9 @@
+N = int(input())
+times = []
+for i in range(N):
+    t = int(input())
+    times.append(4+((2**t) -1)*2)
+
+
+for j in range(N):
+    print(times[j] % 1000000007)
