@@ -1,0 +1,25 @@
+FactFibo numbers is a combination of two sets of numbers.
+
+FactFibo(n) = fact(n) + fibo(n)
+
+The two sets of numbers Fact() and Fibo() are mentioned below:
+
+Factorial definition: Factorial definition e.g Fib(4) = Fib(3) + Fib(2)
+
+  Fib(3) = Fib(2) + Fib(1)
+
+  Fib(2) = Fib(1) + Fib(0)= 0 + 1 = 1
+
+  Fib(3) = 1 + 1 = 2
+
+  Fib(4) = 2 + 1 = 3
+
+  FactFibo(4) = Fact(4) + Fibo(4)
+The FactFibo(4) in this case is given as a command line argument.
+
+Sample Input
+4
+Sample Output
+The output is shown below as it is accepted by the system.
+
+27
