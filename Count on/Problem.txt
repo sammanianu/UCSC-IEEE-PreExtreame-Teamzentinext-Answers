@@ -1,0 +1,44 @@
+Following function outputs the n-th Fibonacci number. It also a prints a series of 0s and 1s. You should write a program to find the number of 0s and 1s printed by the follwoing function, for given n.
+
+int fibonacci(int n)
+    if n equals 0
+        print(0)
+        return 0
+    end
+
+    if n equals 1
+        print(1)
+        return 1
+    end
+
+    return fibonacci(n - 1) + fibonacci(n - 2)
+
+end
+Input Format
+
+Input is a single integer n, between 0 and 40 inclusive.
+
+Output Format
+
+Output should be two space separated integers. First should be the number of 0s printed by the function and the second should be the number of 1s printed.
+
+Sample Input
+
+6
+
+Sample Output
+
+5 8
+
+Explanation
+
+Execution of fibonacci(3)
+
+fibonacci(3) calls fibonacci(2) - A and fibonacci(1) - B
+fibonacci(2) - A calls fibonacci(1) - C and fibonacci(0) - D.
+fibonacci(1) - C prints 1 and returns 1.
+fibonacci(0) - D prints 0 and returns 0.
+fibonacci(2) - A returns 1.
+fibonacci(1) - B prints 1 and returns 1.
+fibonacci(3) returns 2.
+In total, '0' is printed once and '1' is printed twice.

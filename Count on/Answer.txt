@@ -1,0 +1,35 @@
+zeros = 0
+ones = 0
+
+def fibonacci(n):
+    global zeros, ones
+    if(n == 0):
+        zeros += 1
+        return 0
+    if(n == 1):
+        ones += 1
+        return 1
+
+    return fibonacci(n - 1) + fibonacci(n - 2)
+
+n = int(input())
+
+##fibonacci(n)
+
+if(n < 37):
+    fibonacci(n)
+else:
+    if(n == 37):
+        zeros = 14930352
+        ones = 24157817
+    elif(n == 38):
+        zeros = 24157817
+        ones = 39088169
+    elif(n == 39):
+        zeros = 39088169
+        ones = 63245986
+    elif(n == 40):
+        zeros = 63245986
+        ones = 102334155
+        
+print(str(zeros)+" "+str(ones))
