@@ -1,0 +1,49 @@
+results = []
+
+def getInvalidCount(arr):
+    res = 0
+    ln = len(arr)
+    for i in range(ln):
+        if(arr[i] != i+1):
+            res += 1
+
+    return res
+
+
+def sortArr(arr, n):
+    global results
+    result = False
+    count = 0
+    while(getInvalidCount(arr) > 0 and count < n*3):
+        count += 1
+        for j in range(n-2):
+            arrMin = min(arr[j], arr[j+1], arr[j+2])
+            if(arrMin == arr[j+1]):
+                temp = arr[j]
+                arr[j] = arr[j+1]
+                arr[j+1] = arr[j+2]
+                arr[j+2] = temp
+            elif(arrMin == arr[j+2]):
+                temp = arr[j+2]
+                arr[j+2] = arr[j+1]
+                arr[j+1] = arr[j]
+                arr[j] = temp
+            else:
+                continue
+
+    if(getInvalidCount(arr) == 0):
+        results.append("YES")
+    else:
+        results.append("NO")
+    
+   
+
+T = int(input())
+for t in range(T):
+    N = int(input())
+    A = list(map(int, input().split(" ")))
+    
+    sortArr(A, N)
+
+for i in range(T):
+    print(results[i])
